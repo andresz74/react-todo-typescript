@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import './App.css';
-import { Header, AddTodo, TodoList } from './components';
+import { About, Header, AddTodo, TodoList } from './components';
 import { TodoInterface } from './models/Todo';
 
 const App = () => {
@@ -44,11 +46,22 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="App">
-			<Header />
-			<AddTodo addNewTodo={addNewTodo} />
-			<TodoList todos={todos} markCompleted={markCompleted} deleteTodo={deleteTodo} />
-		</div>
+		<Router>
+			<div className="App">
+				<Header />
+				<Route
+					exact
+					path="/"
+					render={() => (
+						<>
+							<AddTodo addNewTodo={addNewTodo} />
+							<TodoList todos={todos} markCompleted={markCompleted} deleteTodo={deleteTodo} />
+						</>
+					)}
+				/>
+				<Route path="/about" component={About} />
+			</div>
+		</Router>
 	);
 };
 
