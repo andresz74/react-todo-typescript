@@ -1,0 +1,5 @@
+*.ejs
+configuration.manifest.json
+configuration.environment.json
+public/assets/
+infrastructure/
