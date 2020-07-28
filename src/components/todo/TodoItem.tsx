@@ -5,8 +5,8 @@ import { TodoInterface } from '../../models/Todo';
 
 interface ComponentProps {
 	todo: TodoInterface;
-	markCompleted: (id: number) => void;
-	deleteTodo: (id: number) => void;
+	markCompleted: (id: string) => void;
+	deleteTodo: (id: string) => void;
 }
 
 export const TodoItem: React.FC<ComponentProps> = ({ todo, markCompleted, deleteTodo }) => {
