@@ -1,3 +1,11 @@
+# Todo List Crash Course
+- Crash course from Traversy Media: [React JS Crash Course](https://youtu.be/sBws8MSXN7A)     
+I use functional components instead of classes, and Typescript.
+
+## Requirements
+- Install [Visual Studio Code](https://code.visualstudio.com/Download).
+- Instal [Prettier extension](https://prettier.io) for VSC.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
